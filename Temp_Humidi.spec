@@ -1,5 +1,6 @@
 # -*- mode: python ; coding: utf-8 -*-
 
+
 block_cipher = None
 
 
@@ -8,7 +9,7 @@ a = Analysis(['Temp_Humidi.py'],
              binaries=[],
              datas=[],
              hiddenimports=[],
-             hookspath=[],
+             hookspath=['./hooks/'],
              runtime_hooks=[],
              excludes=[],
              win_no_prefer_redirects=False,
@@ -30,4 +31,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=True )
+          console=False )

@@ -72,4 +72,6 @@ Temporary Items
 # Directory generated at build time
 build/
 __pycache__/
+*firestore.json
+dist/
 
