@@ -51,4 +51,5 @@ co2 sensor calibration.
 現在、バージョンによってCO2センサの有効/無効を分けております。
 
 version.2.x : CO2センサ無し
+
 version.3.x : CO2センサあり
