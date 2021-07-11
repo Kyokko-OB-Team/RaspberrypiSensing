@@ -5,7 +5,7 @@ block_cipher = None
 
 
 a = Analysis(['Temp_Humidi.py'],
-             pathex=['/home/kot-pi/RasberryPi_Source'],
+             pathex=['/home/kot-pi/RaspberrypiSensing'],
              binaries=[],
              datas=[],
              hiddenimports=[],

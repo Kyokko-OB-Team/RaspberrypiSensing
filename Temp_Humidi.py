@@ -18,10 +18,18 @@ from firebase_admin import firestore
 # param humidity: 湿度データ(数値)
 # param co2_concentration: CO2濃度(数値)
 def pushDataFirestore(collection_name, date, temperature, humidity, co2_concentration):
-  cred = credentials.Certificate('./kyokko-ob-team_firestore.json')
+  # 鍵ファイルチェック
+  keyfile = "./kyokko-ob-team_firestore.json"
+  if not os.path.exists(keyfile):
+    # 鍵ファイルが無い場合はpushしない
+    print("FireStore key is not found. Abort data push.")
+    sys.exit()
+
+  cred = credentials.Certificate(keyfile)
   firebase_admin.initialize_app(cred)
   db = firestore.client()
 
+  # pushするドキュメントの作成
   store_document = db.collection(collection_name).document(str(date))
   store_document.set({
     'temperature': temperature,
@@ -76,6 +84,7 @@ def getCo2Concentration():
 # シリアルデバイスの設定
 co2_serial = serial.Serial("/dev/ttyAMA0", baudrate=9600, timeout=0.1)
 
+# 実行時引数のチェック
 is_firestore_enable = False
 firestore_collection_name = ""
 
