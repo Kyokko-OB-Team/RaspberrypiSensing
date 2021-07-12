@@ -27,10 +27,14 @@ $ wget https://github.com/gari30/RasberryPi_Source/releases/download/<release名
 
 2. CO2センサはUART通信のため、[こちら](https://github.com/Kyokko-OB-Team/Document/wiki/raspberrypi_zero_enable_uart)を参考に、Raspberry Pi Zero WのUARTを有効化してください。
 
-3. Temp_Humidiと同じディレクトリに、FireStoreの鍵ファイル(kyokko-ob-team_firestore.json)を配置し、実行してください。
+3. Temp_Humidiと同じディレクトリに、FireStoreの鍵ファイル(kyokko-ob-team_firestore.json)を配置します。
+   鍵ファイルが存在しない場合は、firestoreへのpushを行いません。
+
+4. 以下のように、第1引数に `--firestore` を指定し、第2引数にpush先のコレクション名を指定して実行してください。
+   なお、指定しない場合は、firestoreへのpushを行いません。
 
 ```
-$ ./Temp_Humidi
+$ ./Temp_Humidi --firestore [コレクション名]
 ```
 
 ### CO2センサのキャリブレーションについて
@@ -45,11 +49,3 @@ CO2センサにはキャリブレーション機能があります。
 $ ./Temp_Humidi co2_init
 co2 sensor calibration.
 ```
-
-### バージョンについて
-
-現在、バージョンによってCO2センサの有効/無効を分けております。
-
-version.2.x : CO2センサ無し
-
-version.3.x : CO2センサあり
