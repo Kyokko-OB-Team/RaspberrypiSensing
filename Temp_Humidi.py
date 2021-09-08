@@ -32,6 +32,7 @@ def pushDataFirestore(collection_name, date, temperature, humidity, co2_concentr
   # pushするドキュメントの作成
   store_document = db.collection(collection_name).document(str(date))
   store_document.set({
+    'time': date,
     'temperature': temperature,
     'humidity': humidity,
     'co2-concentration': co2_concentration,
