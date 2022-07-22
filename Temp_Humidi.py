@@ -89,7 +89,7 @@ co2_serial = serial.Serial("/dev/ttyAMA0", baudrate=9600, timeout=0.1)
 is_firestore_enable = False
 firestore_collection_name = ""
 
-if 1 <= len(sys.argv):
+if 2 <= len(sys.argv):
   arg_data = sys.argv[1]
   if arg_data == 'co2_init':
     # co2濃度センサのキャリブレーション
@@ -101,7 +101,7 @@ if 1 <= len(sys.argv):
     # firestoreのpush先あり
     is_firestore_enable = True
 
-    if 2 <= len(sys.argv):
+    if 3 <= len(sys.argv):
       firestore_collection_name = sys.argv[2]
       print("push to " + firestore_collection_name)
 
