@@ -67,3 +67,11 @@ CO2センサにはキャリブレーション機能があります。
 $ ./Temp_Humidi co2_init
 co2 sensor calibration.
 ```
+
+### ビルド方法
+
+以下のコマンドで、必要なモジュールをインストールしてください。
+```
+$ pip3 install pyinstaller
+```
+その後、リポジトリルートで`build.sh`を実行してください。
