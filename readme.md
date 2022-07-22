@@ -31,6 +31,7 @@ $ wget https://github.com/gari30/RasberryPi_Source/releases/download/<release名
 ```
 sudo apt install python3-smbus python3-pip
 pip3 install pyserial
+pip3 install grpcio==1.39.0
 pip3 install firebase-admin==5.0.1
 ```
 
