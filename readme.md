@@ -41,12 +41,14 @@ pip3 install firebase-admin==5.0.1
    ※上記リンクはGoogle Driveのスプレッドシートのリンクとなります。  
      PCブラウザ以外で開いた場合、貼り付けてある画像ファイルが見えない可能性がありますのでPCで開くようにしてください。
 
-2. CO2センサはUART通信のため、[こちら](https://github.com/Kyokko-OB-Team/Document/wiki/raspberrypi_zero_enable_uart)を参考に、Raspberry Pi Zero WのUARTを有効化してください。
+1. 温湿度センサはI2C通信のため、[こちら](https://github.com/Kyokko-OB-Team/Document/wiki/raspberrypi_zero_enable_i2c)を参考に、Raspbery Pi ZeroのI2Cを有効化してください。
 
-3. Temp_Humidiと同じディレクトリに、FireStoreの鍵ファイル(kyokko-ob-team_firestore.json)を配置します。
+1. CO2センサはUART通信のため、[こちら](https://github.com/Kyokko-OB-Team/Document/wiki/raspberrypi_zero_enable_uart)を参考に、Raspberry Pi Zero WのUARTを有効化してください。
+
+1. Temp_Humidiと同じディレクトリに、FireStoreの鍵ファイル(kyokko-ob-team_firestore.json)を配置します。
    鍵ファイルが存在しない場合は、firestoreへのpushを行いません。
 
-4. 以下のように、第1引数に `--firestore` を指定し、第2引数にpush先のコレクション名を指定して実行してください。
+1. 以下のように、第1引数に `--firestore` を指定し、第2引数にpush先のコレクション名を指定して実行してください。
    なお、指定しない場合は、firestoreへのpushを行いません。
 
 ```
