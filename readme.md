@@ -19,6 +19,21 @@ Raspberry Pi Zero Wでのみ、動作を確認しております。
 $ wget https://github.com/gari30/RasberryPi_Source/releases/download/<release名>/Temp_Humidi
 ```
 
+### 必要なライブラリ
+
+このプログラムでは以下のライブラリを使用しています。
+
+- smbus
+- serial
+- firebase_admin
+
+実行時にエラーが出る場合は、以下のようにライブラリをインストールしてください。
+```
+sudo apt install python3-smbus python3-pip
+pip3 install pyserial
+pip3 install firebase-admin==5.0.1
+```
+
 ### 実行方法
 
 1. 温湿度センサとCO2センサを[こちら](https://docs.google.com/spreadsheets/d/1O9RdbZVYhcz8fl8laEi-iNipAEgiIhet7oFAs-LHp1w/edit)の資料を参考に接続してください。  
