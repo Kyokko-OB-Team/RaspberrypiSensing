@@ -16,7 +16,7 @@ Raspberry Pi Zero Wでのみ、動作を確認しております。
 [Releases](https://github.com/Kyokko-OB-Team/RasberryPi_Source/releases)にあるTemp_Humidiバイナリファイルをダウンロードして使用してください。
 
 ```
-$ wget https://github.com/gari30/RasberryPi_Source/releases/download/<release名>/Temp_Humidi
+$ wget https://github.com/Kyokko-OB-Team/RasberryPi_Source/releases/download/<release名>/Temp_Humidi
 ```
 
 ### 必要なライブラリ
